@@ -6,7 +6,12 @@ from PIL import Image
 
 st.set_page_config(page_title='HOME')
 
-video_file = open('./vdieos/726.mp4', 'rb')
-video_bytes = video_file.read()
+with open ('./vdieos/beauty.mp4', 'rb') as f:
+    video_bytes = f.read()
+    st.video(video_bytes)
 
-st.video(video_bytes)
+with open ('./vdieos/funny.mp4', 'rb') as f:
+    video_bytes = f.read()
+    st.video(video_bytes)
+    
+st.markdown("![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)")
